@@ -10,3 +10,6 @@ def factorial(n):
 
 
 print(factorial(4))
+
+def iteration(n):
+    return 
