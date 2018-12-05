@@ -17,3 +17,4 @@ def bigCommonMeasure2(x, y):
 
 print(bigCommonMeasure1(24, 18))
 print(bigCommonMeasure2(24, 18))
+
