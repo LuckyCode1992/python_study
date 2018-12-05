@@ -6,6 +6,7 @@ import sys
 def bigCommonMeasure1(x, y):
     return y if (x % y == 0) else bigCommonMeasure1(y, x % y)
 
+
 # 辗转相除法 缺点是，数字大了之后，栈的深度会很深，所以不建议使用
 def bigCommonMeasure2(x, y):
     if x == y:
@@ -15,6 +16,14 @@ def bigCommonMeasure2(x, y):
     else:
         return bigCommonMeasure2(y, abs(x - y))
 
+
 print(bigCommonMeasure1(24, 18))
 print(bigCommonMeasure2(24, 18))
 
+
+def smallCommonMultiple(x, y):
+    return int(x * y / bigCommonMeasure1(x, y))
+
+
+print(bigCommonMeasure1(24, 18))
+print(smallCommonMultiple(24, 18))
