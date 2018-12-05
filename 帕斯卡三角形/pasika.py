@@ -34,10 +34,12 @@ def triangles():
     while True:
         yield N
         N.append(0)
-        N = [
-            N[i - 1] + N[i]
-             for i in range(len(N))
-             ]
+        # N = [
+        #     N[i - 1] + N[i]
+        #      for i in range(len(N))
+        #      ]
+        for i in range(len(N)):
+            N[i] = N[i-1]+N[i]
 m = 0
 for t in triangles():
     print(t)
